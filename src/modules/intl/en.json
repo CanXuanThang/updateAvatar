@@ -1,0 +1,22 @@
+{
+  "welcome": "Hello",
+  "email": "Email Address",
+  "password": "Password",
+  "repeatPassword": "Confirm password",
+  "name": "Name",
+  "gender": "Gender",
+  "region": "Nation",
+  "state": "State",
+  "rememberMe": "Remember me",
+  "emailRequire": "Require email",
+  "emailInvalid": "Invalid email",
+  "passwordRequire": "Require password",
+  "matchPasswordInvalid": "Invalid password match",
+  "minPasswordInvalid": "Password minimum 4 characters",
+  "nameRequire": "Require name",
+  "genderRequire": "Require gender",
+  "regionRequire": "Require nation",
+  "stateRequire": "Require state",
+  "login": "Login",
+  "register": "Sign up"
+}
