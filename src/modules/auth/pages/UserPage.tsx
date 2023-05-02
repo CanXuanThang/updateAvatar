@@ -32,20 +32,6 @@ function UserPage() {
   const [completedCrop, setCompletedCrop] = useState<any>(null);
   const previewCanvasRef = useRef<any>(null);
 
-  const getUser = useCallback(async () => {
-    setLoading(true);
-    const json = await dispatch(fetchThunk(API_PATHS.userProfile, 'get'));
-    setLoading(false);
-
-    if (json?.code === RESPONSE_STATUS_SUCCESS) {
-      setData(json.data);
-    }
-  }, [dispatch]);
-
-  useEffect(() => {
-    getUser();
-  }, [getUser]);
-
   const onLogOut = () => {
     dispatch(logout());
     dispatch(replace(ROUTES.loginV2));
