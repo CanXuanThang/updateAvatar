@@ -3,10 +3,8 @@ import { ThunkDispatch } from 'redux-thunk';
 import { AppState } from '../../../redux/reducer';
 import { Action } from 'typesafe-actions';
 import { ChangeEvent, useCallback, useEffect, useRef, useState } from 'react';
-import { fetchThunk } from '../../common/redux/thunk';
 import { API_PATHS } from '../../../configs/api';
 import { RESPONSE_STATUS_SUCCESS } from '../../../utils/httpResponseCode';
-import { IUser } from '../../../models/user';
 import { ACCESS_TOKEN_KEY, APIUrl } from '../../../utils/constants';
 import './UserPage.scss';
 import { logout, setUserInfo } from '../redux/authReducer';
@@ -21,11 +19,9 @@ import axios from 'axios';
 
 function UserPage() {
   const dispatch = useDispatch<ThunkDispatch<AppState, null, Action<string>>>();
-  const [loading, setLoading] = useState(false);
   const avatarInputRef = useRef<HTMLInputElement>(null);
   const { user } = useSelector((state: AppState) => state.profile);
-  const [data, setData] = useState<IUser>();
-  const [image, setImage] = useState(data?.avatar);
+  const [image, setImage] = useState(user?.avatar);
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [crop, setCrop] = useState<any>({ unit: '%', width: 30, aspect: 1 });
   const imgRef = useRef<any>(null);
@@ -108,9 +104,6 @@ function UserPage() {
     }
   };
 
-  if (loading) {
-    return <h3>Loading....</h3>;
-  }
   return (
     <div className="container">
       <div className="card" style={{ margin: 'auto', width: '100%', alignItems: 'center' }}>
