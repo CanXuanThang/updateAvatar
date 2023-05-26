@@ -1,12 +1,13 @@
-import { Button, Space } from 'antd';
+import { SpaceBar } from '@mui/icons-material';
+import { Button } from '@mui/material';
 
 function Header() {
   return (
     <div className="d-flex justify-content-between">
       <h2>Payroll Transactions List</h2>
-      <Space wrap>
-        <Button type="primary">Export CSV </Button>
-      </Space>
+      <SpaceBar>
+        <Button>Export CSV </Button>
+      </SpaceBar>
     </div>
   );
 }

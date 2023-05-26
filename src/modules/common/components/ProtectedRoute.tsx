@@ -17,7 +17,7 @@ const ProtectedRoute = (props: Props) => {
   return (
     <Redirect
       to={{
-        pathname: ROUTES.loginV2,
+        pathname: ROUTES.home,
       }}
     />
   );

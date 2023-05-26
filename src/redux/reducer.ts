@@ -5,12 +5,15 @@ import authReducer, { AuthState } from '../modules/auth/redux/authReducer';
 import intlReducer, { IntlState } from '../modules/intl/redux/intlReducer';
 import { Product } from '../models/product';
 import dataReducer from '../modules/product/redux/reduce';
+import { Employee } from '../models/employee';
+import employeeReducer from '../modules/auth/redux/employeeReducer';
 
 export interface AppState {
   router: RouterState;
   intl: IntlState;
   profile: AuthState;
   product: Product;
+  employee: Employee;
 }
 
 export default function createRootReducer(history: History) {
@@ -19,5 +22,6 @@ export default function createRootReducer(history: History) {
     intl: intlReducer,
     profile: authReducer,
     product: dataReducer,
+    employee: employeeReducer,
   });
 }

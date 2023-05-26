@@ -30,7 +30,7 @@ function UserPage() {
 
   const onLogOut = () => {
     dispatch(logout());
-    dispatch(replace(ROUTES.loginV2));
+    dispatch(replace(ROUTES.login));
   };
 
   const changeAvatar = () => {

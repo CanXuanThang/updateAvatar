@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import logo from '../../../logo-420-x-108.png';
+import logo from '../../../imagies/Rectangle4.png';
 import { ILoginParams } from '../../../models/auth';
 import { useDispatch } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 import { AppState } from '../../../redux/reducer';
 import { Action } from 'redux';
-import { fetchThunk } from '../../common/redux/thunk';
 import { API_PATHS } from '../../../configs/api';
 import { RESPONSE_STATUS_SUCCESS } from '../../../utils/httpResponseCode';
 import { setUserInfo } from '../redux/authReducer';
@@ -14,9 +13,10 @@ import { ACCESS_TOKEN_KEY } from '../../../utils/constants';
 import { ROUTES } from '../../../configs/routes';
 import { replace } from 'connected-react-router';
 import { getErrorMessageResponse } from '../../../utils';
-// import LoginFormV2 from '../components/LoginFormV2';
-import { FormattedMessage } from 'react-intl';
 import LoginForm from '../components/LoginForm';
+import './LoginPage.scss';
+import axios from 'axios';
+import Footer from './employeeManagement/layouts/footer/Footer';
 
 const LoginPage = () => {
   const dispatch = useDispatch<ThunkDispatch<AppState, null, Action<string>>>();
@@ -28,16 +28,18 @@ const LoginPage = () => {
       setErrorMessage('');
       setLoading(true);
 
-      const json = await dispatch(
-        fetchThunk(API_PATHS.signIn, 'post', { email: values.email, password: values.password }),
-      );
+      const json = await axios.post(API_PATHS.signIn, {
+        username: values.username,
+        password: values.password,
+        company_id: values.company_id,
+      });
 
       setLoading(false);
 
-      if (json?.code === RESPONSE_STATUS_SUCCESS) {
+      if (json?.status === RESPONSE_STATUS_SUCCESS) {
         dispatch(setUserInfo(json.data));
-        Cookies.set(ACCESS_TOKEN_KEY, json.data.token, { expires: values.rememberMe ? 7 : undefined });
-        dispatch(replace(ROUTES.home));
+        Cookies.set(ACCESS_TOKEN_KEY, json.data.data.token);
+        dispatch(replace(ROUTES.employee));
         return;
       }
 
@@ -48,22 +50,20 @@ const LoginPage = () => {
 
   return (
     <div
-      className="container"
       style={{
-        height: '100vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
+        background: '#f8f9fa',
       }}
     >
-      <img src={logo} alt="" style={{ maxWidth: '250px', margin: '32px' }} />
+      <img src={logo} alt="" style={{ width: '100px', height: '100px', marginTop: '64px' }} />
+      <h3 className="title">HR Management System</h3>
 
       <LoginForm onLogin={onLogin} loading={loading} errorMessage={errorMessage} />
-      {/* <LoginFormV2 onLogin={onLogin} loading={loading} errorMessage={errorMessage} /> */}
-      <a href="/photo">
-        <FormattedMessage id="register" />
-      </a>
+
+      <Footer />
     </div>
   );
 };

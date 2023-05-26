@@ -1,8 +1,9 @@
 import { Dispatch, useCallback, useState } from 'react';
-import { Button, Space } from 'antd';
 import { useDispatch } from 'react-redux';
 import { Product, SearchDataType } from '../../../models/product';
 import { searchItemProduct } from '../redux/reduce';
+import { SpaceBar } from '@mui/icons-material';
+import { Button } from '@mui/material';
 
 interface Props {
   data: any;
@@ -95,20 +96,20 @@ function Selector(props: Props) {
         onChange={(e) => setDataItem({ ...dataItem, invoice: e.target.value })}
       />
       <div className="d-flex flex-column " style={{ padding: 0 }}>
-        <Space
+        <SpaceBar
           className="site-button-ghost-wrapper"
           style={{
             display: 'flex',
             width: '100%',
           }}
         >
-          <Button type="primary" className="mx-5" ghost onClick={handleApply}>
+          <Button variant="contained" className="mx-5" onClick={handleApply}>
             Apply
           </Button>
-          <Button type="primary" danger ghost onClick={handleClear}>
+          <Button variant="contained" onClick={handleClear}>
             Clear
           </Button>
-        </Space>
+        </SpaceBar>
       </div>
     </div>
   );

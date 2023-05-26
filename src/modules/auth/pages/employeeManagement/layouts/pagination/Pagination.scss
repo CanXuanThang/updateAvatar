@@ -1,0 +1,105 @@
+@font-face {
+    font-family: SVN-Sofia-Medium;
+    src: url('../../../../../../imagies/SVN-SofiaPro-Medium.f29daefe0725dbae93c7.woff2');
+}
+
+@font-face {
+    font-family: SVN-Sofia-Regular;
+    src: url('../../../../../../imagies/SVN-SofiaPro-Medium.f29daefe0725dbae93c7.woff2');
+}
+
+.btn-custom {
+    min-width: 48px;
+    height: 35px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: rgb(241, 243, 245);
+    color: rgb(104, 112, 118);
+    padding: 0 6px;
+    margin: 0 3px;
+    line-height: 1.35714;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: SVN-Sofia-Regular;
+    box-shadow: none;
+}
+
+.btn-custom-next {
+    min-width: 48px;
+    height: 35px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #8e9498;
+    padding: 0 6px;
+    margin: 0 3px;
+    line-height: 1.35714;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: SVN-Sofia-Regular;
+
+    .css-i4bv87-MuiSvgIcon-root{
+        width: 17px;
+        height: 17px;
+    }
+}
+
+.btn-disable {
+    min-width: 48px;
+    height: 35px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #c6cacc;
+    padding: 0 6px;
+    margin: 0 3px;
+    line-height: 1.35714;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: SVN-Sofia-Regular;
+    .css-i4bv87-MuiSvgIcon-root{
+        width: 17px;
+        height: 17px;
+    }
+}
+
+.btn-total {
+    display: flex;
+    min-width: 103px;
+    max-height: 35px;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 6px;
+    padding: 8px 12px;
+    gap: 5px;
+    background-color: rgb(241, 243, 245);
+    box-shadow: none !important;
+
+    p {
+        margin: 0px;
+        line-height: 1.35714;
+        font-size: 14px;
+        font-family: SVN-Sofia-Regular;
+        font-weight: 400;
+        color: rgb(104, 112, 118);
+    }
+}
+
+.active {
+    background: rgb(230, 232, 235) !important;
+    color: rgb(17, 24, 28) !important;
+    font-weight: 600;
+}

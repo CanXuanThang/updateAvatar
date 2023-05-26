@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: SVN-Sofia-Medium;
+  src: url('./imagies/SVN-SofiaPro-Medium.f29daefe0725dbae93c7.woff2');
+}
+
+@font-face {
+  font-family: SVN-Sofia-Regular;
+  src: url('./imagies/SVN-SofiaPro-Medium.f29daefe0725dbae93c7.woff2');
+}

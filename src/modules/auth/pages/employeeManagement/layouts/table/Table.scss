@@ -1,0 +1,90 @@
+body {
+    .css-1fw5qro-MuiPaper-root {
+        box-shadow: none;
+    }
+
+    .css-y8ay40-MuiTableCell-root {
+        background: #ccc;
+        border-right: 2px solid #fff;
+        border-bottom: none;
+    }
+
+    .css-1ex1afd-MuiTableCell-root {
+        border-right: 2px solid #fff;
+        border-top: 2px solid #fff;
+        border-bottom: none;
+        height: 26px;
+        padding: 0 10px 0 10px;
+        font-family: SVN-Sofia-Regular;
+        line-height: 1.5;
+        font-size: 12px;
+        font-weight: 400;
+        color: rgb(104, 112, 118);
+    }
+
+    .css-i4bv87-MuiSvgIcon-root {
+        width: 20px;
+        height: 20px;
+    }
+
+    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+        padding: 4px;
+    }
+
+    .css-10drtbx-MuiButtonBase-root-MuiCheckbox-root{
+        padding: 4px;
+    }
+
+    .css-y8ay40-MuiTableCell-root {
+        line-height: 1.5rem;
+        font-size: 14px;
+        font-family: SVN-Sofia-Regular;
+        font-weight: 600;
+        color: rgb(17, 24, 28);
+        padding: 1.5px 10px;
+        background-color: rgb(236, 238, 240);
+        box-sizing: inherit !important;
+    }
+}
+
+.css-1q1u3t4-MuiTableRow-root {
+    box-sizing: content-box !important;
+}
+
+.css-1q1u3t4-MuiTableRow-root.MuiTableRow-hover:hover {
+    background-color: #edf6ff !important;
+    color: rgb(0, 145, 255);
+}
+
+.css-1q1u3t4-MuiTableRow-root > th:first-child {
+    padding: 2px 3px !important;
+}
+
+.css-p4vh9o-MuiTableRow-root > td:first-child {
+    padding: 0 3px !important;
+
+    span {
+        padding: 3px;
+    }
+}
+
+.css-ruio5v-MuiTableRow-root > td:first-child {
+    padding: 0 3px !important;
+
+    span {
+        padding: 3px;
+    }
+}
+
+.css-1310zxy-MuiTableContainer-root::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color:#f1f3f5;
+}
+
+.css-1310zxy-MuiTableContainer-root::-webkit-scrollbar-thumb
+{
+	border-radius: 8px;
+	-webkit-box-shadow: #d7dbdf;
+	background-color: #d7dbdf;
+}

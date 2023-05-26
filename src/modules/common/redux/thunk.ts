@@ -21,7 +21,7 @@ export function fetchThunk(
         contentType !== 'multipart/form-data'
           ? {
               'Content-Type': contentType || 'application/json',
-              Authorization: Cookies.get(ACCESS_TOKEN_KEY) || '',
+              Authorization: 'Bearer ' + Cookies.get(ACCESS_TOKEN_KEY) || '',
             }
           : {},
       cache: 'no-store',

@@ -1,0 +1,205 @@
+body {
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 2;
+        background: #ffff;
+        box-shadow: 0px 3px 15px #ECEEF0;
+        height: 60px;
+    
+        .img {
+            margin-left: 6px;
+            margin-right: 16px;
+            width: 36px;
+            height: 36px;
+        }
+        
+        .header-title {
+            margin: 0px;
+            font-family: SVN-Sofia-Medium;
+            font-weight: 500;
+            line-height: 1.375;
+            font-size: 24px;
+            letter-spacing: -0.03em;
+            color: rgb(17, 24, 28);
+        }
+
+        .btn-tran {
+            background: #f1f3f5;
+            border-radius: 6px;
+            height: 32px;
+            color: #000;
+            padding: 8px 6px;
+
+            .container-tran {
+                display: flex;
+                align-items: center;
+                border-radius: 6px;
+    
+                img {
+                    width: 16px;
+                    height: 12px;
+                    margin-right: 6px;
+                }
+    
+                span {
+                    line-height: 1.5;
+                    font-size: 12px;
+                    font-family: SVN-Sofia-Regular;
+                    font-weight: 400;
+                    margin-right: 16px;
+                }
+
+                svg {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .btn-info {
+            width: 32px;
+            height: 32px;
+            background: rgb(230, 232, 235);
+            border: none;
+            border-radius: 50%;
+            margin-left: 20px;
+            position: relative;
+
+            span {
+                position: absolute;
+                text-align: center;
+                top: 6px;
+                left: 0;
+                right: 0;
+                height: 32px;
+                font-weight: 600;
+                font-size: 1.25rem;
+                line-height: 16px;
+                color: #FBFDFF;
+            }
+        }
+    }
+
+    .css-1869usk-MuiFormControl-root {
+        background: #f1f3f5;
+    }
+
+    .css-ece9u5 {
+        min-width: 98px;
+    }
+
+    .css-1ka5eyc-MuiPaper-root-MuiMenu-paper-MuiPopover-paper {
+        margin-top: 4px;
+    }
+
+    .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+        border: none;
+
+        &:hover {
+            background-color: rgba(0, 145, 255, 0.08);
+        }
+    }
+
+    #menu-item-1 {
+        display: none;
+    }
+    .css-6hp17o-MuiList-root-MuiMenu-list {
+        padding: 0;
+    }
+
+    .item-tran {
+        padding: 0 !important;
+        margin: 0 !important;
+
+        .btn-container {
+            display: block;
+            width: 100%;
+            padding: 4px 6px;
+            
+            .container-item-tran {
+                width: 16px;
+                margin-right: 6px;
+                
+                img {
+                    width: 16px;
+                    margin-right: 6px;
+                }
+
+                span {
+                    line-height: 1.5;
+                    font-size: 12px;
+                    font-family: SVN-Sofia-Regular;
+                    font-weight: 400;
+                    margin-right: 16px;
+                }
+
+                svg {
+                    font-size: 18px;
+                }
+            }
+        }
+    
+    }
+
+    .container-tran-img {
+        width: 16px;
+        margin-right: 6px;
+    }
+
+    .item-tran-span {
+        line-height: 1.5;
+        font-size: 12px;
+        font-family: SVN-Sofia-Regular;
+        font-weight: 400;
+        margin-right: 16px;
+    }
+
+    .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+        padding: 4px 6px;
+    }
+
+    .container-select {
+        .MuiOutlinedInput-root {
+            .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+                padding: 0;
+                padding-right: 32px;
+            }
+        }
+    }
+
+    .css-d9ml5t-MuiDrawer-docked .MuiDrawer-paper {
+        width: 328px;
+    }
+
+    .content-menu-title {
+        margin: 0px;
+        font-family: SVN-Sofia-Medium;
+        font-weight: 500;
+        line-height: 1.375;
+        font-size: 24px;
+        letter-spacing: -0.03em;
+        color: rgb(0, 106, 220);
+        text-transform: capitalize;
+    }
+
+    .advance-title {
+        margin: 0px;
+        font-family: SVN-Sofia-Medium;
+        font-weight: 500;
+        line-height: 1.375;
+        font-size: 24px;
+        letter-spacing: -0.03em;
+        text-transform: capitalize;
+    }
+
+    .css-1rom1er {
+        margin-left: 328px;
+        background: #f8f9fa;
+    }
+    
+    .css-jvjou6{
+        width: 100% !important;
+    }
+}
